@@ -11,14 +11,14 @@ class PersonaController {
     }
   };
 
-  static obtenerDatos=async(req,res)=>{
-try {
-    const buscarPersonas= await Persona.find();
-    res.status(200).json(buscarPersonas);
-} catch (error) {
-    return console.log(error.error);
-}
-  }
+  static obtenerDatos = async (req, res) => {
+    try {
+      const buscarPersonas = await Persona.find();
+      res.status(200).json(buscarPersonas);
+    } catch (error) {
+      return console.log(error.error);
+    }
+  };
 }
 
 module.exports = PersonaController;
